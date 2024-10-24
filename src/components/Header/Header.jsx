@@ -1,7 +1,8 @@
 // import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-const Header = () => {
+const Header = ({ cart,prices }) => {
+   
     return (
         <div className="flex justify-around py-4 bg-slate-200">
           <h2 className="text-4xl font-bold">logo</h2>
@@ -10,15 +11,16 @@ const Header = () => {
                 <li>Product</li>
                 <li>Contact</li>
 
-                <li>Cart <span>1</span></li>
-                <li>$500</li>
+                <li>Cart <span>{cart.length}</span></li>
+                <li>Price: $ { prices}</li>
             </ul>
         </div>
     );
 };
 
 Header.propTypes = {
-    
+    cart: PropTypes.array.isRequired,
+    price:PropTypes.number.isRequired
 };
 
 export default Header;
