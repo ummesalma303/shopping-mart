@@ -5,7 +5,7 @@ import About from '../About/About';
 import { useState } from 'react';
 // import { useState } from 'react';
 
-const CartContainer = ({ handleToggle, isActive,cart,handleDelete }) => {
+const CartContainer = ({ handleToggle, isActive,cart,handleDelete,about }) => {
 //    console.log(cart)
     const [button,setButton]=useState(true)
        const handleButton = () => {
@@ -24,9 +24,9 @@ const CartContainer = ({ handleToggle, isActive,cart,handleDelete }) => {
                     </div> <br />
 
             <button onClick={()=>handleToggle('cart')} className={`mr-4 ${isActive.cart?"btn btn-accent mr-4":'btn'}`}>Cart</button>
-            <button onClick={() => handleToggle('About')} className={`${isActive.cart ? "btn " : 'btn btn-accent'}`}>About</button>
+            <button onClick={() => handleToggle('About')} className={`${isActive.cart ? "btn " : 'btn btn-accent'}`}>Archive</button>
             {
-                isActive.cart?<Cart isActive={isActive} cart={cart} handleDelete={handleDelete}></Cart>:<About></About>
+                isActive.cart?<Cart isActive={isActive} cart={cart} handleDelete={handleDelete}></Cart>:<About about={about}></About>
             }
 
                     
@@ -42,7 +42,8 @@ CartContainer.propTypes = {
     handleToggle: PropTypes.func.isRequired,
     isActive: PropTypes.object.isRequired,
     cart: PropTypes.array.isRequired,
-    handleDelete:PropTypes.func.isRequired
+    handleDelete: PropTypes.func.isRequired,
+    about:PropTypes.array.isRequired
 };
 
 export default CartContainer;

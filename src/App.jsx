@@ -7,7 +7,8 @@ import Products from './components/Products/Products'
 
 function App() {
   const [cart, setCart] = useState([]);
-  const [prices,setPrice]=useState(0)
+  const [prices, setPrice] = useState(0);
+  const [about, setAbout] = useState([])
   const [isActive, setActive] = useState({
     cart: true
   });
@@ -43,10 +44,14 @@ function App() {
     setPrice(prices-product.price)
   }
   const handleDelete = (id) => {
-    // console.log(cart)
     handleDeletePrice(id)
     const del = cart.filter(product => product.id !== id);
     
+    const aboutCard = cart.find(p => p.id === id)
+
+    const newAbout=[...about,aboutCard]
+    setAbout(newAbout);
+
     setCart(del)
   }
 
@@ -58,7 +63,7 @@ function App() {
       <Header cart={cart} prices={prices}></Header>
       <div className='md:flex justify-around px-12'>
       <Products handleProduct={handleProduct}></Products>
-        <CartContainer handleToggle={handleToggle} isActive={isActive} cart={cart} handleDelete={handleDelete}></CartContainer>
+        <CartContainer handleToggle={handleToggle} isActive={isActive} cart={cart} handleDelete={handleDelete} about={about}></CartContainer>
       </div>
     </>
   )
