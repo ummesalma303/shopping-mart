@@ -1,0 +1,48 @@
+[
+    {
+      "id": "001",
+      "name": "Quantum Laptop Pro",
+      "description": "A high-performance laptop with a sleek design, featuring the latest Intel i9 processor, 32GB RAM, and a 1TB SSD.",
+      "price": "$1,999.99",
+      "category": "Electronics",
+      "isFeatured": true,
+      "imageLink": "https://rukminim2.flixcart.com/image/850/1000/xif0q/headphone/s/p/y/p9-bluetooth-headphones-stylish-wireless-gaming-headset-with-bt5-original-imahf4pmgshpmeqa.jpeg?q=20&crop=false"
+    },
+    {
+      "id": "002",
+      "name": "Aerodynamic Running Shoes",
+      "description": "Lightweight and comfortable running shoes designed for long-distance runners. Available in multiple colors and sizes.",
+      "price": "$129.99",
+      "category": "Footwear",
+      "isFeatured": false,
+      "imageLink": "https://example.com/image2"
+    },
+    {
+      "id": "003",
+      "name": "Smart Home Speaker",
+      "description": "Voice-activated smart speaker with high-fidelity sound quality and seamless integration with home automation systems.",
+      "price": "$249.99",
+      "category": "Home Appliances",
+      "isFeatured": true,
+      "imageLink": "https://example.com/image3"
+    },
+    {
+      "id": "004",
+      "name": "Wireless Noise-Cancelling Headphones",
+      "description": "Over-ear wireless headphones with active noise cancellation and up to 30 hours of battery life.",
+      "price": "$299.99",
+      "category": "Electronics",
+      "isFeatured": false,
+      "imageLink": "https://example.com/image4"
+    },
+    {
+      "id": "005",
+      "name": "Ergonomic Office Chair",
+      "description": "Comfortable and adjustable office chair with lumbar support and breathable mesh back.",
+      "price": "$199.99",
+      "category": "Furniture",
+      "isFeatured": true,
+      "imageLink": "https://example.com/image5"
+    }
+  ]
+  
